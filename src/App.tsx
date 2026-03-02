@@ -5,7 +5,7 @@ export default function App() {
     // 6 - это просто для отступов сверху и снизу, чтобы было по центру
     <Container maxWidth="md" sx={{ py: 6 }}> 
       {/* spacing - это отступы между элементами внутри Stack */}
-      <Stack spacing={5}>  
+      <Stack spacing={2}>  
         <Typography variant="h3" component="h1">
           Igor Kondurov
         </Typography>
