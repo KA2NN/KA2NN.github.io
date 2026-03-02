@@ -21,3 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# general env
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# workspace file (у тебя он есть)
+*.code-workspace
