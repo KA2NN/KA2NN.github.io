@@ -34,7 +34,8 @@ export type ProfileItem = {
 };
 
 export const profile = {
-  name: "Igor Kondurov",
+  // name: "Igor Kondurov",
+  name: "Igor",
   title: "Senior QA Engineer • Automation • API • SQL",
   about: [
     "Я QA, который закрывает риски релиза через автоматизацию, мониторинги и нормальную диагностику.",

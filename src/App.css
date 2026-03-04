@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+
+:root { --app-height: 100%; }
+
+body {
+  overflow-y: auto;
+  height: var(--app-height);
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #424242; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgb(254, 132, 132); }
