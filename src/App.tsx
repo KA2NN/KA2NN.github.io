@@ -1,49 +1,92 @@
 import { Container, Typography, Stack, Chip, Link, Divider } from "@mui/material";
+import { profile } from "./data/profile";
+import { SocialLinks } from "./components/SocialLinks";
 
 export default function App() {
+  const { name, title, about, skills, contacts, experience, projects } = profile;
+
   return (
-    // 6 - это просто для отступов сверху и снизу, чтобы было по центру
     <Container maxWidth="md" sx={{ py: 6 }}> 
-      {/* spacing - это отступы между элементами внутри Stack */}
-      <Stack spacing={2}>  
-        <Typography variant="h3" component="h1">
-          Igor Kondurov
-        </Typography>
-        <Typography variant="h6" color="text.secondary">
-          Senior QA Engineer • Automation • API • SQL
-        </Typography>
+      <Stack spacing={2}>
+        {/* HERO */}
+        <Stack spacing={1}>
+          <Typography variant="h3" component="h1">
+            {name}
+          </Typography>
+          <Typography variant="h6" color="text.secondary">
+            {title}
+          </Typography>
+        </Stack>
+
+        {/* SKILLS */}
         <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
-
-          <Chip label="Python" />
-          <Chip label="PyTest" />
-          <Chip label="Playwright" />
-          <Chip label="Postman" />
-          <Chip label="SQL / ClickHouse" />
-          <Chip label="CI/CD" />
-          <Chip label="Docker" />
-          <Chip label="Grafana / Graylog" />
+          {skills.map((s) => (
+            <Chip key={s} label={s} />
+          ))}
         </Stack>
 
-        <Divider sx={{ my: 2 }} />
+        <Divider />
 
+        {/* ABOUT */}
         <Typography variant="h5">About</Typography>
-        <Typography>
-          Я QA, который закрывает риски релиза через автоматизацию, мониторинги и нормальную диагностику.
-          Делаю тестовую инфраструктуру, понимаю API/SQL и люблю, когда баги умирают быстро.
-        </Typography>
-
-        <Divider sx={{ my: 2 }} />
-
-        <Typography variant="h5">Contacts</Typography>
-        <Stack spacing={0.5}>
-          <Link href="mailto:YOUR_EMAIL">YOUR_EMAIL</Link>
-          <Link href="https://github.com/YOUR_GH" target="_blank" rel="noreferrer">
-            github.com/YOUR_GH
-          </Link>
-          <Link href="https://t.me/YOUR_TG" target="_blank" rel="noreferrer">
-            t.me/YOUR_TG
-          </Link>
+        <Stack spacing={1}>
+          {about.map((p) => (
+            <Typography key={p}>{p}</Typography>
+          ))}
         </Stack>
+
+        <Divider />
+
+        {/* EXPERIENCE */}
+        <Typography variant="h5">Experience</Typography>
+        <Stack spacing={2}>
+          {experience.map((item) => (
+            <Stack key={`${item.company}-${item.period}`} spacing={0.5}>
+              <Typography variant="h6">
+                {item.role} — {item.company}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                {item.period}
+              </Typography>
+              <Stack component="ul" sx={{ pl: 3, my: 0 }}>
+                {item.bullets.map((b) => (
+                  <Typography component="li" key={b}>
+                    {b}
+                  </Typography>
+                ))}
+              </Stack>
+            </Stack>
+          ))}
+        </Stack>
+
+        <Divider />
+
+        {/* PROJECTS */}
+        <Typography variant="h5">Projects</Typography>
+        <Stack spacing={2}>
+          {projects.map((p) => (
+            <Stack key={p.name} spacing={1}>
+              <Typography variant="h6">{p.name}</Typography>
+              <Typography>{p.description}</Typography>
+              <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
+                {p.stack.map((t) => (
+                  <Chip key={t} label={t} size="small" />
+                ))}
+              </Stack>
+            </Stack>
+          ))}
+        </Stack>
+
+        <Divider />
+
+        {/* CONTACTS */}
+        <Typography variant="h5">Contacts</Typography>
+        <SocialLinks
+          telegram={profile.contacts.telegram}
+          github={profile.contacts.github}
+          linkedin={profile.contacts.linkedin}
+          email={profile.contacts.email}
+        />
       </Stack>
     </Container>
   );
