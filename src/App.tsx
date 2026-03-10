@@ -104,42 +104,45 @@ export default function App() {
 
           {/* CONTACTS */}
           <GlassSection title="Contacts">
-            <Stack direction="row" spacing={1.5} sx={{ mt: 2 }} alignItems="center">
-              <SocialLinks
-                telegram={contacts.telegram}
-                github={contacts.github}
-                linkedin={contacts.linkedin}
-                email={contacts.email}
-              />
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            spacing={1.5}
+            sx={{ mt: 2, width: "100%" }}
+            alignItems={{ xs: "flex-start", sm: "center" }}
+            justifyContent={{ xs: "flex-start", sm: "space-between" }}
+          >
+            <SocialLinks
+              telegram={contacts.telegram}
+              github={contacts.github}
+              linkedin={contacts.linkedin}
+              email={contacts.email}
+            />
 
-              <Button
-                variant="contained"
-                component="a"
-                href="/Igor_Kondurov_CV.pdf"
-                download
-                sx={{
-                  px: 2,
-                  py: 1,
-                  borderRadius: 3,
-                  textTransform: "none",
-                  fontWeight: 700,
-
-                  color: "rgba(250, 250, 250, 0.95)",
-                  backgroundColor: "rgba(10, 10, 12, 0.35)",
-                  backdropFilter: "blur(14px)",
-                  WebkitBackdropFilter: "blur(14px)",
-                  border: "1px solid rgba(255, 138, 0, 0.35)",
-
-                  "&:hover": {
-                    backgroundColor: "rgba(10, 10, 12, 0.50)",
-                    borderColor: "rgba(255, 138, 0, 0.60)",
-                  },
-                }}
-              >
-                Download my CV
-              </Button>
-            </Stack>
-          </GlassSection>
+            <Button
+              component="a"
+              href="/Igor_Kondurov_CV.pdf"
+              download
+              sx={{
+                px: 2,
+                py: 1,
+                borderRadius: 3,
+                textTransform: "none",
+                fontWeight: 700,
+                color: "rgba(250, 250, 250, 0.95)",
+                backgroundColor: "rgba(10, 10, 12, 0.35)",
+                backdropFilter: "blur(14px)",
+                WebkitBackdropFilter: "blur(14px)",
+                border: "1px solid rgba(255, 138, 0, 0.35)",
+                "&:hover": {
+                  backgroundColor: "rgba(10, 10, 12, 0.50)",
+                  borderColor: "rgba(255, 138, 0, 0.60)",
+                },
+              }}
+            >
+              Download my CV
+            </Button>
+          </Stack>
+        </GlassSection>
         </Stack>
       </Container>
     </BaseBackground>
