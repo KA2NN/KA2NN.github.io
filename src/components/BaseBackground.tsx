@@ -7,6 +7,7 @@ const Root = styled("div")({
   background: `
     radial-gradient(910px 650px at 80% 25%, rgba(255, 140, 0, 0.28), transparent 60%),
     radial-gradient(1170px 845px at 15% 50%, rgba(255, 120, 0, 0.22), transparent 65%),
+    radial-gradient(780px 650px at 20% 10%, rgba(255, 90, 0, 0.19), transparent 70%),
     radial-gradient(780px 650px at 70% 85%, rgba(255, 90, 0, 0.19), transparent 70%),
     linear-gradient(135deg, #0b0708 0%, #171012 35%, #0c0708 100%)
   `,
