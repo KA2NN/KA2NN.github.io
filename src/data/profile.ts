@@ -50,16 +50,18 @@ export type ProfileItem = {
 
 export const profile: ProfileItem = {
   name: "Igor",
-  title: "Senior QA Engineer · 5 yrs · Python · TypeScript · API · CI/CD",
+  title: "Senior QA Engineer · 6 yrs · Mobile & Backend Testing · Automation & CI/CD",
   about: [
     "Senior QA Engineer / SDET with 5+ years in high-load systems (up to 200K RPS). I build processes that prevent bugs, not just catch them. Experienced in functional, API, and performance testing, team leadership (up to 9 people), and test automation. Open to remote & relocation.",
-    "Early in my career, a single wrong terminal command halted an airport for two hours. Nobody was hurt — but I learned a lesson no course can teach. Since then, I treat every release like it matters. Because it does.",
+    "Early in my career, a single wrong terminal command halted an airport for two hours. Nobody was hurt - but I learned a lesson no course can teach. Since then, I treat every release like it matters. Because it does.",
   ],
   skills: [
-    "Python", "PyTest", "Playwright", "TypeScript", "JavaScript",
-    "Postman", "REST API", "SQL", "ClickHouse", "Redis",
-    "CI/CD", "Linux", "Bash", "Git", "Docker",
-    "Grafana", "Graylog", "K6", "Charles Proxy", "Allure",
+    "Test Strategy", "Test Design", "Mobile Testing", "REST API Testing", "Test Automation",
+    "Python", "PyTest", "Playwright", "JavaScript", "SQL",
+    "PostgreSQL", "ClickHouse", "Redis", "Postman", "Swagger",
+    "WireMock", "Proxyman", "Allure TestOps", "Xcode", "Android Studio",
+    "Kubernetes", "Docker", "GitLab CI", "CI/CD", "Git",
+    "Kibana", "Sentry", "Grafana", "Graylog", "K6",
   ],
   contacts: {
     email: "mrcosha6@gmail.com",
@@ -68,12 +70,12 @@ export const profile: ProfileItem = {
     linkedin: "igor-kondurov-022939228",
   },
   languages: [
-    { language: "English", level: "B2 — Upper Intermediate", code: "🇬🇧" },
+    { language: "English", level: "B2 - Upper Intermediate", code: "🇬🇧" },
     { language: "Russian",  level: "Native",                  code: "🇷🇺" },
     { language: "Ukrainian", level: "Native",                 code: "🇺🇦" },
   ],
   certifications: [
-    { name: "ISTQB Foundation — Software Testing", issuer: "Stepik",   year: "2021" },
+    { name: "ISTQB Foundation - Software Testing", issuer: "Stepik",   year: "2021" },
     { name: "Crash Course on Python",               issuer: "Google / Coursera", year: "2022" },
     { name: "Python Automation QA",                 issuer: "Hexlet",   year: "2023" },
     { name: "Performance Testing",                  issuer: "Otus",     year: "2024" },
@@ -81,10 +83,23 @@ export const profile: ProfileItem = {
     { name: "JavaScript QA Engineer",               issuer: "Otus",     year: "2024" },
   ],
   experience: [
+      {
+      company: "Expera",
+      role: "Senior QA Engineer",
+      period: "2026 - present",
+      bullets: [
+        "QA ownership of a retail mobile banking product (iOS/Android) and its backend services",
+        "Functional, integration, regression and end-to-end testing across mobile client and backend",
+        "Built a unified test documentation structure in Allure TestOps and established regression coverage of core business flows",
+        "Integration testing with third-party providers, including anti-fraud solutions",
+        "Introduced mock-based isolation of external dependencies, removing reliance on third-party availability",
+        "Defect investigation through log aggregation, error monitoring and direct access to services in Kubernetes",
+      ],
+    },
     {
       company: "ProfIT Family",
       role: "Senior QA Engineer / Team Lead",
-      period: "2022 — present",
+      period: "2022 - 2026",
       bullets: [
         "Led QA for a DSP platform handling up to 200K RPS in real-time bidding",
         "Built and maintained API/UI automation framework (PyTest, Playwright, Allure)",
@@ -97,7 +112,7 @@ export const profile: ProfileItem = {
     {
       company: "MedCloud",
       role: "QA Engineer",
-      period: "2021 — 2022",
+      period: "2021 - 2022",
       bullets: [
         "Tested a medical CRM integration platform processing up to 20K RPS",
         "Built test coverage from scratch: test cases, checklists, regression and smoke suites",
@@ -108,7 +123,15 @@ export const profile: ProfileItem = {
   ],
   projects: [
     {
-      name: "DSP Platform QA — RTB at 200K RPS",
+      name: "Mobile Banking QA - iOS & Android",
+      description: "QA ownership of a retail mobile banking product: card and wallet transfers, payments and payment strategies, QR operations, and personal data handling. Designed the test model from analytics documents, established regression coverage of core business flows, and verified releases on real devices. Covered the integration of a telecom anti-fraud SDK end to end - the happy path plus provider failures, timeouts and malformed responses against a mocked adapter. Automated bulk export and import of test cases over the Allure TestOps REST API in Python, replacing manual transfer of hundreds of cases.",
+      impact: "Regression turned into a repeatable, managed process; testing no longer depends on third-party availability",
+      role: "Senior QA Engineer",
+      type: "work",
+      stack: ["Allure TestOps", "Android Studio", "Xcode", "TestFlight", "Firebase", "Proxyman", "WireMock", "Postman", "Kubernetes", "Kibana", "Sentry", "PostgreSQL", "Python"],
+    },
+    {
+      name: "DSP Platform QA - RTB at 200K RPS",
       description: "End-to-end QA ownership of a Demand-Side Platform for real-time ad bidding. Covered integrations with SSP, DMP, and trackers. Built test strategy, automated regression and smoke suites, and set up incident monitoring before users noticed anything.",
       impact: "Regression & smoke fully automated for all critical flows",
       role: "Senior QA Engineer",

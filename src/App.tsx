@@ -49,7 +49,7 @@ export default function App() {
             <Stack spacing={2}>
               {experience.map((item) => (
                 <Stack key={`${item.company}-${item.period}`} spacing={0.5}>
-                  <Typography variant="h6">{item.role} — {item.company}</Typography>
+                  <Typography variant="h6">{item.role} - {item.company}</Typography>
                   <Typography variant="body2" color="text.secondary">{item.period}</Typography>
                   <Stack component="ul" sx={{ pl: 3, my: 0 }}>
                     {item.bullets.map((b) => (
@@ -94,7 +94,7 @@ export default function App() {
                 <Stack key={l.language} direction="row" spacing={1.5} alignItems="center">
                   <Typography>{l.code}</Typography>
                   <Typography fontWeight={600}>{l.language}</Typography>
-                  <Typography variant="body2" color="text.secondary">— {l.level}</Typography>
+                  <Typography variant="body2" color="text.secondary">- {l.level}</Typography>
                 </Stack>
               ))}
             </Stack>
