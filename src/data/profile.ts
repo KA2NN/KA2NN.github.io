@@ -52,7 +52,7 @@ export const profile: ProfileItem = {
   name: "Igor",
   title: "Senior QA Engineer · 6 yrs · Mobile & Backend Testing · Automation & CI/CD",
   about: [
-    "Senior QA Engineer / SDET with 5+ years in high-load systems (up to 200K RPS). I build processes that prevent bugs, not just catch them. Experienced in functional, API, and performance testing, team leadership (up to 9 people), and test automation. Open to remote & relocation.",
+    "Senior QA Engineer / SDET with 6+ years in high-load systems (up to 200K RPS). I build processes that prevent bugs, not just catch them. Experienced in functional, API, and performance testing, team leadership (up to 9 people), and test automation. Open to remote & relocation.",
     "Early in my career, a single wrong terminal command halted an airport for two hours. Nobody was hurt - but I learned a lesson no course can teach. Since then, I treat every release like it matters. Because it does.",
   ],
   skills: [
